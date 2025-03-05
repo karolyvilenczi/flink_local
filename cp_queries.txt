@@ -10,8 +10,19 @@ Here is the query:
     age INT
 ) WITH (
     'connector' = 'filesystem',
-    'path' = '/opt/flink/jobs/data.csv',
+    'path' = '/opt/flink/jobs/01_data.csv',
     'format' = 'csv'
 );"
 
 Please generate a sample csv file with 50 entries to work with this.
+
+(After generating)
+CREATE TABLE my_table (
+    id INT,
+    name STRING,
+    age INT
+) WITH (
+    'connector' = 'filesystem',
+    'path' = '/opt/flink/jobs/data/01_data.csv',
+    'format' = 'csv'
+);
