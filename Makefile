@@ -20,3 +20,8 @@ ps:
 
 ps_comp:
 	docker compose ps
+
+# flink related
+# need the environment to be running
+flink_sql:
+	docker exec -it flink-jobmanager /opt/flink/bin/sql-client.sh
