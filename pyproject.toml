@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "flink-local-python-client"
+version = "0.1.0"
+description = ""
+authors = ["kvilenczi <karoly.vilenczi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+faker = "^36.1.1"
+pyflink = "^1.0"
+ipython = "^9.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
