@@ -20,4 +20,3 @@ ps:
 
 ps_comp:
 	docker compose ps
-	
