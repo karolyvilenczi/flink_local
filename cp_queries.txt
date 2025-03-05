@@ -1,0 +1,17 @@
+-----------------------------------------------------------------------------
+Analyze my project. 
+I am learning apache flink and for this query to test the stream processor, 
+please generate a simple csv file with 50 entries.
+
+Here is the query:
+"CREATE TABLE my_table (
+    id INT,
+    name STRING,
+    age INT
+) WITH (
+    'connector' = 'filesystem',
+    'path' = '/opt/flink/jobs/data.csv',
+    'format' = 'csv'
+);"
+
+Please generate a sample csv file with 50 entries to work with this.
