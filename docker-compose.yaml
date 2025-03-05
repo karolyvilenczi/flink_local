@@ -1,0 +1,28 @@
+
+services:
+  jobmanager:
+    image: flink:latest
+    container_name: flink-jobmanager
+    ports:
+      - "8081:8081"  # Flink Web UI
+      - "6123:6123"  # JobManager RPC
+    volumes:
+      - ./jobs:/opt/flink/jobs  # Mount only job files, not the entire /opt/flink
+    working_dir: /opt/flink
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    command: jobmanager
+
+  taskmanager:
+    image: flink:latest
+    container_name: flink-taskmanager
+    depends_on:
+      - jobmanager
+    ports:
+      - "6124:6124"  # TaskManager RPC
+    volumes:
+      - ./jobs:/opt/flink/jobs
+    working_dir: /opt/flink
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    command: taskmanager
