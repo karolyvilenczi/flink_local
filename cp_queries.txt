@@ -16,7 +16,9 @@ Here is the query:
 
 Please generate a sample csv file with 50 entries to work with this.
 
-(After generating)
+(After generating did:)
+01.
+
 CREATE TABLE my_table (
     id INT,
     name STRING,
@@ -26,3 +28,9 @@ CREATE TABLE my_table (
     'path' = '/opt/flink/jobs/data/01_data.csv',
     'format' = 'csv'
 );
+
+02.
+SELECT * from my_table;
+
+OK
+-----------------------------------------------------------------------------
