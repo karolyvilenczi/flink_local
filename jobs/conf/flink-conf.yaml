@@ -1,0 +1,4 @@
+blob.server.port: 6124
+jobmanager.rpc.address: jobmanager
+env.java.opts: "-Dlog4j2.formatMsgNoLookups=true"
+query.server.port: 6125
